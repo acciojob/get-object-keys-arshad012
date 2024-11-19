@@ -6,11 +6,11 @@ class Obj {
 	}
 
 	getKeys() {
-		let keysArr = [];
-		for(let key in this) {
-			keysArr.push(key);
-		}
-		return keysArr;
+		// let keysArr = [];
+		// for(let key in this) {
+		// 	keysArr.push(key);
+		// }
+		return this;
 	}
 }
 
