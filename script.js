@@ -3,16 +3,26 @@ const myObj = {
 	name:'John',
 	age:30,
 	city:'New York',
-	getKeys: function() {
-		let keysArr = [];
-		for(let key in this) {
-			keysArr.push(key);
-		}
-		keysArr.pop();
-		return keysArr;
-	} 
+	// getKeys: function() {
+	// 	let keysArr = [];
+	// 	for(let key in this) {
+	// 		keysArr.push(key);
+	// 	}
+	// 	keysArr.pop();
+	// 	return keysArr;
+	// } 
 }
-console.log(myObj.getKeys());
+
+function getKeys() {
+	let keysArr = [];
+	for(let key in this) {
+		keysArr.push(key);
+	}
+	// keysArr.pop();
+	return keysArr;
+} 
+console.log(getKeys.call(myObj));
+// getKeys.call(myObj);
 
 /*
 class Obj {
